@@ -1,0 +1,25 @@
+<div class="login-main">
+    
+    
+    <form class="login-form" [formGroup]="register" (ngSubmit)="onSubmit()">
+        <div class="form-continaer-img">
+            <img src="/libro_abierto.png" alt="libro">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Usuario</label>
+            <input type="text" class="form-control"formControlName="usuario">
+        </div>
+        <div class="mb-3">
+        <label for="" class="form-label">Contraseña</label>
+        <input type="password" class="form-control " formControlName="password">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Ingrese nuevamente su contraseña</label>
+            <input type="password" class="form-control " formControlName="repassword">
+        </div>
+        <div class="form-button-container">
+            <button [disabled]="this.register.invalid || this.register.value.repassword != this.register.value.password" class="btn btn-primary btn-lg" style="--bs-btn-padding-y: .30rem; --bs-btn-padding-x: 3.0rem; --bs-btn-font-size: 1.0rem;">Enviar</button>
+        </div>
+        
+    </form>
+</div>

@@ -1,0 +1,30 @@
+.nav-main-crud{
+    margin: 20px auto;
+    width: 80%;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 4px solid cadetblue;
+}
+.nav{
+    margin: 20px 0px;
+}
+.nav li{
+    margin: 0px 5px;
+}
+.main-crud{
+    width: 90%;
+    margin: auto;
+    overflow-x:auto;
+}
+.table-custom{
+    width: 100%;
+    
+}
+.table-custom thead{
+    text-align: center;
+}
+.table-custom thead tr{
+    display: flex;
+    justify-content: space-between;
+}
+

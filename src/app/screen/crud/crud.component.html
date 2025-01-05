@@ -1,0 +1,71 @@
+<nav class="nav-main-crud">
+  <ul *ngIf="this.authService.isAuthenticated()" class="nav" > <!-- *ngIf="this.authService.isAuthenticated()" -->
+      <li class="nav-item">
+          <button (click)="toCrudAutor()">Autores</button>
+      </li>
+      <li class="nav-item">
+          <button (click)="toCrudLibro()">Libros</button>
+      </li>
+      <li class="nav-item">
+          <button (click)="toCrudGenero()">Generos</button>
+      </li>
+  </ul>
+  <ul class="nav">
+    <li>
+      <button (click)="this.authService.logout()">Cerrar Session</button>
+    </li>
+  </ul>
+</nav>
+<div class="main-crud"> 
+  <table class="table-custom" >
+    <thead>
+      <tr *ngIf="viewAutor">
+        <th scope="col">idAutor</th>
+        <th scope="col">nombre</th>
+        <th scope="col">nacionalidad</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">urlImage</th>
+      </tr>
+      <tr *ngIf="viewLibro">
+        <th scope="col">idLibro</th>
+        <th scope="col">nombre</th>
+        <th scope="col">url</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">precio</th>
+        <th scope="col">unidadesEnTotal</th>
+        <th scope="col">unidadesDisponibles</th>
+        <th scope="col">unidadesVendidas</th>
+        <th scope="col">genero</th>
+        <th scope="col"></th>
+      </tr>
+      <tr *ngIf="viewGenero">
+        <th scope="col">idGenero</th>
+        <th scope="col">nombre</th>
+        <th scope="col">descripcion</th>
+      </tr>
+      
+      
+    </thead>
+    <tbody>
+      <tr *ngIf="viewAutor">
+        <app-autor-row
+          *ngFor=" let autor of autorList"
+          [autor]="autor"
+        />
+      </tr>
+      <tr *ngIf="viewGenero">
+        <app-genero-row
+        *ngFor=" let genero of generoList"
+        [genero]="genero"
+        />
+      </tr>
+      <tr *ngIf="viewLibro">
+        <app-libro-row
+        *ngFor=" let libro of libroList"
+        [libro]="libro"
+        />
+      </tr>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,31 @@
+.login-main{
+    margin: auto;
+    width: 80%;
+}
+.nav{
+    margin: 20px auto;
+    border-bottom: 4px solid cadetblue;
+}
+
+.login-form{
+    margin: 150px auto;
+    width: 50%;
+    border: 5px solid cadetblue; 
+    border-radius: 5%;
+    padding: 20px;   
+}
+.form-continaer-img{
+    text-align: center;
+    margin: 20px auto;
+}
+.login-form img{
+    height: 100px;
+    width: 100px;
+}
+.form-button-container{
+    text-align: center;
+}
+.border{
+    border: 5px solid cadetblue; 
+    border-radius: 5%;
+}
